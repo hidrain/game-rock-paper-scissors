@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 type Props = {
     myChoice: string,
@@ -20,10 +21,47 @@ export const Game = ({ myChoice, score, setScore }: Props) => {
         newHousePick()
     }, [])
 
+    const Result = () => {
+        if (myChoice === 'rock' && house === 'scissors') {
+            setPlayerWin('win')
+            setScore(score + 1)
+        } else if (myChoice === 'rock' && house === 'paper') {
+            setPlayerWin('lose')
+            setScore(score - 1)
+        } else if (myChoice === 'scissors' && house === 'paper') {
+            setPlayerWin('win')
+            setScore(score + 1)
+        } else if (myChoice === 'scissors' && house === 'rock') {
+            setPlayerWin('lose')
+            setScore(score - 1)
+        } else if (myChoice === 'paper' && house === 'rock') {
+            setPlayerWin('win')
+            setScore(score + 1)
+        } else if (myChoice === 'paper' && house === 'scissors') {
+            setPlayerWin('lose')
+            setScore(score - 1)
+        } else {
+            setPlayerWin('draw')
+        }
+    }
+
+    useEffect(() => {
+        Result()
+    }, [house])
+
     return (
         <div>
             My choice: {myChoice} <br />
-            House choice: {house}
+            House choice: {house}<br />
+
+            Result:
+            {playerWin === 'win' && <h2>You win!</h2>}
+            {playerWin === 'lose' && <h2>You lose!</h2>}
+            {playerWin === 'draw' && <h2>Draw</h2>}
+
+            <Link to='/' onClick={() => setHouse('')}>
+                Play again
+            </Link>
         </div>
     )
 }
