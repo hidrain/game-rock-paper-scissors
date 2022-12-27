@@ -50,7 +50,50 @@ export const Game = ({ myChoice, score, setScore }: Props) => {
     }, [house])
 
     return (
-        <div>
+        <div className='game'>
+            <div className="game__you">
+                <span className="text">You picked:</span>
+                <div className={`icon icon--${myChoice} ${playerWin === 'win' ? `icon icon--${myChoice}--winner` : ''}`}>
+                </div>
+            </div>
+
+            {playerWin === 'win' && <div className="game__play">
+                <span className="text">You win</span>
+                <Link to='/'
+                    className='play-again'
+                    onClick={() => setHouse('')}>
+                    Play again
+                </Link>
+            </div>}
+
+
+            {playerWin === 'lose' && <div className="game__play">
+                <span className="text">You lose</span>
+                <Link to='/'
+                    className='play-again'
+                    onClick={() => setHouse('')}>
+                    Play again
+                </Link>
+            </div>}
+
+            {playerWin === 'draw' && <div className="game__play">
+                <span className="text">Draw</span>
+                <Link to='/'
+                    className='play-again'
+                    onClick={() => setHouse('')}>
+                    Play again
+                </Link>
+            </div>}
+
+            <div className="game__house">
+                <span className="text">The House picked:</span>
+                <div className={`icon icon--${house} ${playerWin === 'lose' ? `icon icon--${house}--winner` : ''}`}></div>
+            </div>
+        </div >
+    )
+}
+
+/*
             My choice: {myChoice} <br />
             House choice: {house}<br />
 
@@ -62,6 +105,4 @@ export const Game = ({ myChoice, score, setScore }: Props) => {
             <Link to='/' onClick={() => setHouse('')}>
                 Play again
             </Link>
-        </div>
-    )
-}
+*/
