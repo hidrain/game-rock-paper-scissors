@@ -13,7 +13,6 @@ function App() {
   return (
     <>
       <div className="container">
-
         <Header score={score} />
         <Routes>
           <Route path='/' element={<Play setMyChoice={setMyChoice} />}></Route>
