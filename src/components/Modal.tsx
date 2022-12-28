@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom'
 import close from "../images/icon-close.svg";
-import rules from "../images/image-rules.svg";
+import rules from "../images/image-rules-bonus.svg";
 
 type Props = {
     toggle: () => void

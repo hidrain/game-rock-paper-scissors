@@ -9,6 +9,8 @@ export const Header = ({ score }: Props) => {
                 <span>Rock</span>
                 <span>Paper</span>
                 <span>Scissors</span>
+                <span>Lizard</span>
+                <span>Spock</span>
             </div>
 
             <div className="score-box">

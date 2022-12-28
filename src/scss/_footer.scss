@@ -1,15 +1,16 @@
 .footer {
     width: 100vw;
+    font-size: 13px;
+    ;
 
     .atribution {
         position: absolute;
         left: 50%;
         transform: translate(-50%);
         bottom: 1rem;
-        color: lighten($header-outline, 20%);
+        color: lighten($header-outline, 5%);
 
         & a {
-            border-bottom: lighten($header-outline, 20%) solid 1px;
             color: lighten($header-outline, 20%);
         }
     }
@@ -17,8 +18,8 @@
     button {
         position: absolute;
         bottom: 1rem;
-        padding: 7px 25px;
         right: 1rem;
+        padding: 15px 25px;
         border-radius: .4rem;
         border: 3px solid $header-outline;
         color: lighten($header-outline, 20%);
@@ -26,6 +27,13 @@
         font-weight: 600;
         letter-spacing: 1px;
         cursor: pointer;
+
+        @media (max-width: 450px) {
+            bottom: 3rem;
+            left: 50%;
+            transform: translate(-50%);
+
+        }
 
         &:hover {
             background-color: rgba($color: #fff, $alpha: 0.8);
