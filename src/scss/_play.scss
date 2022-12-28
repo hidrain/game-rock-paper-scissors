@@ -1,11 +1,11 @@
 .play {
     width: 100%;
     position: relative;
-    margin-top: 3.125rem;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
 
-    .triangle {
+    .pentagon {
         position: absolute;
         align-self: center;
         margin-top: 4.375rem;
@@ -22,30 +22,53 @@
             border-radius: 50%;
             transition: transform 0.2s;
 
-            &--paper {
-                @include icon($imageP, $paper-gradient);
-                transform: translateX(1.5rem);
-
-                &:hover {
-                    transform: translateX(1.5rem) scale(1.05);
-                }
+            @media (max-width: 450px) {
+                height: 130px;
+                width: 130px;
             }
 
             &--scissors {
                 @include icon($imageS, $scissors-gradient);
-                transform: translateX(8rem);
+                transform: translateX(20rem);
 
                 &:hover {
-                    transform: translateX(8rem) scale(1.05);
+                    transform: translateX(20rem) scale(1.05);
+                }
+            }
+
+            &--spock {
+                @include icon($imageSP, $spock-gradient);
+                transform: translateX(0rem) translateY(6rem);
+
+                &:hover {
+                    transform: translateX(0rem) translateY(6rem) scale(1.05);
+                }
+            }
+
+            &--paper {
+                @include icon($imageP, $paper-gradient);
+                transform: translateX(10rem) translateY(6rem);
+
+                &:hover {
+                    transform: translateX(10rem) translateY(6rem) scale(1.05);
+                }
+            }
+
+            &--lizard {
+                @include icon($imageL, $lizard-gradient);
+                transform: translateX(-16rem) translateY(17rem);
+
+                &:hover {
+                    transform: translateX(-16rem) translateY(17rem) scale(1.05);
                 }
             }
 
             &--rock {
                 @include icon($imageR, $rock-gradient);
-                transform: translateX(-10rem) translateY(14rem);
+                transform: translateX(-14rem) translateY(17rem);
 
                 &:hover {
-                    transform: translateX(-10rem) translateY(14rem) scale(1.05);
+                    transform: translateX(-14rem) translateY(17rem) scale(1.05);
                 }
             }
         }

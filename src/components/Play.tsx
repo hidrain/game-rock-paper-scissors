@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import Triangle from '../images/bg-triangle.svg'
+import Pentagon from '../images/bg-pentagon.svg'
 
 type Props = {
     setMyChoice: (value: string) => void
@@ -13,8 +13,24 @@ export const Play = ({ setMyChoice }: Props) => {
 
     return (
         <div className='play'>
-            <img src={Triangle} alt="" className='triangle' />
+            <img src={Pentagon} alt="" className='pentagon' />
             <div className="items">
+                <Link to='/game'>
+                    <div
+                        data-id='scissors'
+                        onClick={setChoice}
+                        className="icon icon--scissors">
+                    </div>
+                </Link >
+
+                <Link to='/game'>
+                    <div
+                        data-id='spock'
+                        onClick={setChoice}
+                        className="icon icon--spock">
+                    </div>
+                </Link >
+
                 <Link to='/game'>
                     <div
                         data-id='paper'
@@ -25,12 +41,11 @@ export const Play = ({ setMyChoice }: Props) => {
 
                 <Link to='/game'>
                     <div
-                        data-id='scissors'
+                        data-id='lizard'
                         onClick={setChoice}
-                        className="icon icon--scissors">
+                        className="icon icon--lizard">
                     </div>
                 </Link >
-
                 <Link to='/game'>
                     <div
                         data-id='rock'

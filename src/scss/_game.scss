@@ -47,6 +47,22 @@
                     @include bigShadow($rock-gradient)
                 }
             }
+
+            &--lizard {
+                @include icon($imageL, $lizard-gradient);
+
+                &--winner {
+                    @include bigShadow($lizard-gradient)
+                }
+            }
+
+            &--spock {
+                @include icon($imageSP, $spock-gradient);
+
+                &--winner {
+                    @include bigShadow($paper-gradient)
+                }
+            }
         }
     }
 
@@ -71,7 +87,8 @@
             color: rgb(6, 6, 63);
 
             &:hover {
-                color: red;
+                background-color: rgba(#fff, 0.3);
+                color: #fff;
             }
         }
     }
@@ -100,7 +117,7 @@
                 @include icon($imageP, $paper-gradient);
 
                 &--winner {
-                    @include bigShadow($paper-gradient);
+                    @include bigShadow($paper-gradient)
                 }
             }
 
@@ -117,6 +134,22 @@
 
                 &--winner {
                     @include bigShadow($rock-gradient)
+                }
+            }
+
+            &--lizard {
+                @include icon($imageL, $lizard-gradient);
+
+                &--winner {
+                    @include bigShadow($lizard-gradient)
+                }
+            }
+
+            &--spock {
+                @include icon($imageSP, $spock-gradient);
+
+                &--winner {
+                    @include bigShadow($paper-gradient)
                 }
             }
         }
