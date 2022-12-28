@@ -11,7 +11,7 @@
 @mixin bigShadow($color) {
     box-shadow: inset 0px 5px 6px grey,
         0px 7px darken($color, 15%),
-        0px 0px 0px 30px rgba(#fff, .07),
-        0px 0px 0px 60px rgba(#fff, .05),
-        0px 0px 0px 90px rgba(#fff, .025)
+        0px 0px 0px 30px rgba(#fff, .05),
+        0px 0px 0px 60px rgba(#fff, .025),
+        0px 0px 0px 90px rgba(#fff, .015)
 }

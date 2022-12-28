@@ -19,7 +19,7 @@ export const Game = ({ myChoice, score, setScore }: Props) => {
 
     useEffect(() => {
         newHousePick()
-    }, [])
+    }, [house])
 
     const Result = () => {
         if (myChoice === 'rock' && house === 'scissors') {
