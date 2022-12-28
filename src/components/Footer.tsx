@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Modal } from './Modal'
 
 type Props = {}
@@ -18,7 +18,7 @@ export const Footer = (props: Props) => {
                     Coded by <a href='https://github.com/hidrain'>Yuliya Kurilchik</a>
                 </div>
 
-                <button className="rules">
+                <button className="rules" onClick={toggle}>
                     Rules
                 </button>
             </footer>
