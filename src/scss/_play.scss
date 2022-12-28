@@ -9,6 +9,10 @@
         position: absolute;
         align-self: center;
         margin-top: 4.375rem;
+
+        @media (max-width: 480px) {
+            height: 200%;
+        }
     }
 
     .items {
@@ -22,7 +26,7 @@
             border-radius: 50%;
             transition: transform 0.2s;
 
-            @media (max-width: 450px) {
+            @media (max-width: 480px) {
                 height: 130px;
                 width: 130px;
             }
@@ -31,8 +35,17 @@
                 @include icon($imageS, $scissors-gradient);
                 transform: translateX(20rem);
 
+                @media (max-width: 480px) {
+                    transform: translateX(16.5rem);
+                }
+
                 &:hover {
                     transform: translateX(20rem) scale(1.05);
+
+                    @media (max-width: 480px) {
+                        transform: translateX(16.5rem) scale(1.05);
+                    }
+
                 }
             }
 
@@ -49,8 +62,16 @@
                 @include icon($imageP, $paper-gradient);
                 transform: translateX(10rem) translateY(6rem);
 
+                @media (max-width: 480px) {
+                    transform: translateX(9rem) translateY(6rem);
+                }
+
                 &:hover {
                     transform: translateX(10rem) translateY(6rem) scale(1.05);
+
+                    @media (max-width: 480px) {
+                        transform: translateX(9rem) translateY(6rem) scale(1.05);
+                    }
                 }
             }
 
@@ -58,8 +79,16 @@
                 @include icon($imageL, $lizard-gradient);
                 transform: translateX(-16rem) translateY(17rem);
 
+                @media (max-width: 480px) {
+                    transform: translateX(-14rem) translateY(16rem);
+                }
+
                 &:hover {
                     transform: translateX(-16rem) translateY(17rem) scale(1.05);
+
+                    @media (max-width: 480px) {
+                        transform: translateX(-14rem) translateY(16rem) scale(1.05);
+                    }
                 }
             }
 
@@ -67,8 +96,16 @@
                 @include icon($imageR, $rock-gradient);
                 transform: translateX(-14rem) translateY(17rem);
 
+                @media (max-width: 480px) {
+                    transform: translateX(-10rem) translateY(16rem);
+                }
+
                 &:hover {
-                    transform: translateX(-14rem) translateY(17rem) scale(1.05);
+                    transform: translateX(-14rem) translateY(17em) scale(1.05);
+
+                    @media (max-width: 480px) {
+                        transform: translateX(-10rem) translateY(16rem) scale(1.05);
+                    }
                 }
             }
         }
