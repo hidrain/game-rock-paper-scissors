@@ -11,6 +11,7 @@ export const Game = ({ myChoice, score, setScore }: Props) => {
 
     const [house, setHouse] = useState('')
     const [playerWin, setPlayerWin] = useState('')
+    const [counter, setCounter] = useState(3)
 
     const newHousePick = () => {
         const choices = ['rock', 'paper', 'scissors']
@@ -18,8 +19,8 @@ export const Game = ({ myChoice, score, setScore }: Props) => {
     }
 
     useEffect(() => {
-        newHousePick()
-    }, [house])
+        newHousePick();
+    }, []);
 
     const Result = () => {
         if (myChoice === 'rock' && house === 'scissors') {
@@ -46,8 +47,14 @@ export const Game = ({ myChoice, score, setScore }: Props) => {
     }
 
     useEffect(() => {
-        Result()
-    }, [house])
+        const timer = counter > 0 ? setInterval(() => {
+            setCounter(counter - 1)
+        }, 1000) : Result()
+
+        return () => {
+            clearInterval(timer as NodeJS.Timeout)
+        }
+    }, [counter, house])
 
     return (
         <div className='game'>
@@ -87,22 +94,13 @@ export const Game = ({ myChoice, score, setScore }: Props) => {
 
             <div className="game__house">
                 <span className="text">The House picked:</span>
-                <div className={`icon icon--${house} ${playerWin === 'lose' ? `icon icon--${house}--winner` : ''}`}></div>
+                {
+                    counter == 0
+                        ? <div className={`icon icon--${house} ${playerWin === 'lose' ? `icon icon--${house}--winner` : ''}`}></div>
+                        : <div className="counter">{counter}</div>
+
+                }
             </div>
         </div >
     )
 }
-
-/*
-            My choice: {myChoice} <br />
-            House choice: {house}<br />
-
-            Result:
-            {playerWin === 'win' && <h2>You win!</h2>}
-            {playerWin === 'lose' && <h2>You lose!</h2>}
-            {playerWin === 'draw' && <h2>Draw</h2>}
-
-            <Link to='/' onClick={() => setHouse('')}>
-                Play again
-            </Link>
-*/
