@@ -1,0 +1,35 @@
+.footer {
+    width: 100vw;
+
+    .atribution {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        bottom: 1rem;
+        color: lighten($header-outline, 20%);
+
+        & a {
+            border-bottom: lighten($header-outline, 20%) solid 1px;
+            color: lighten($header-outline, 20%);
+        }
+    }
+
+    button {
+        position: absolute;
+        bottom: 1rem;
+        padding: 7px 25px;
+        right: 1rem;
+        border-radius: .4rem;
+        border: 3px solid $header-outline;
+        color: lighten($header-outline, 20%);
+        background: none;
+        font-weight: 600;
+        letter-spacing: 1px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba($color: #fff, $alpha: 0.8);
+            color: $dark-text;
+        }
+    }
+}
