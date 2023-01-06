@@ -1,19 +1,20 @@
 .footer {
     width: 100vw;
-    font-size: 13px;
-    ;
+    font-size: 12px;
+    height: 100px;
 
     .atribution {
         position: absolute;
         left: 50%;
         transform: translate(-50%);
-        bottom: 1rem;
+        bottom: 0.8rem;
         color: lighten($header-outline, 5%);
 
         & a {
             color: lighten($header-outline, 20%);
         }
     }
+
 
     button {
         position: absolute;
@@ -30,7 +31,7 @@
 
         @media (max-width: 450px) {
             padding: 5px 7px;
-            bottom: 2.5rem;
+            bottom: 2.2rem;
             left: 50%;
             transform: translate(-50%);
             width: 120px;

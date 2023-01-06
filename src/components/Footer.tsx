@@ -13,7 +13,7 @@ export const Footer = (props: Props) => {
 
     return (
         <>
-            <footer className="footer">
+            <div className="footer">
                 <div className="atribution">
                     Coded by <a href='https://github.com/hidrain'>Yuliya Kurilchik</a>
                 </div>
@@ -21,7 +21,7 @@ export const Footer = (props: Props) => {
                 <button className="rules" onClick={toggle}>
                     Rules
                 </button>
-            </footer>
+            </div>
 
             {
                 modal ?
