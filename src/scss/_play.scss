@@ -11,6 +11,7 @@
         margin-top: 4.375rem;
 
         @media (max-width: 480px) {
+            margin-top: 1.7rem;
             height: 200%;
         }
     }
@@ -27,8 +28,9 @@
             transition: transform 0.2s;
 
             @media (max-width: 480px) {
-                height: 130px;
-                width: 130px;
+                height: 110px;
+                width: 110px;
+                border: 12px solid;
             }
 
             &--scissors {
@@ -36,14 +38,14 @@
                 transform: translateX(20rem);
 
                 @media (max-width: 480px) {
-                    transform: translateX(16.5rem);
+                    transform: translateX(14rem) translateY(-1rem);
                 }
 
                 &:hover {
                     transform: translateX(20rem) scale(1.05);
 
                     @media (max-width: 480px) {
-                        transform: translateX(16.5rem) scale(1.05);
+                        transform: translateX(14rem)translateY(-1rem) scale(1.05);
                     }
 
                 }
@@ -53,8 +55,16 @@
                 @include icon($imageSP, $spock-gradient);
                 transform: translateX(0rem) translateY(6rem);
 
+                @media (max-width: 480px) {
+                    transform: translateX(0rem) translateY(3rem);
+                }
+
                 &:hover {
                     transform: translateX(0rem) translateY(6rem) scale(1.05);
+
+                    @media (max-width: 480px) {
+                        transform: translateX(0rem) translateY(3rem) scale(1.05);
+                    }
                 }
             }
 
@@ -63,14 +73,14 @@
                 transform: translateX(10rem) translateY(6rem);
 
                 @media (max-width: 480px) {
-                    transform: translateX(9rem) translateY(6rem);
+                    transform: translateX(7.5rem) translateY(3.5rem);
                 }
 
                 &:hover {
                     transform: translateX(10rem) translateY(6rem) scale(1.05);
 
                     @media (max-width: 480px) {
-                        transform: translateX(9rem) translateY(6rem) scale(1.05);
+                        transform: translateX(7.5rem) translateY(3.5rem) scale(1.05);
                     }
                 }
             }
@@ -80,14 +90,14 @@
                 transform: translateX(-16rem) translateY(17rem);
 
                 @media (max-width: 480px) {
-                    transform: translateX(-14rem) translateY(16rem);
+                    transform: translateX(-11.5rem) translateY(11rem);
                 }
 
                 &:hover {
                     transform: translateX(-16rem) translateY(17rem) scale(1.05);
 
                     @media (max-width: 480px) {
-                        transform: translateX(-14rem) translateY(16rem) scale(1.05);
+                        transform: translateX(-11.5rem) translateY(11rem) scale(1.05);
                     }
                 }
             }
@@ -97,14 +107,14 @@
                 transform: translateX(-14rem) translateY(17rem);
 
                 @media (max-width: 480px) {
-                    transform: translateX(-10rem) translateY(16rem);
+                    transform: translateX(-9.5rem) translateY(11rem);
                 }
 
                 &:hover {
                     transform: translateX(-14rem) translateY(17em) scale(1.05);
 
                     @media (max-width: 480px) {
-                        transform: translateX(-10rem) translateY(16rem) scale(1.05);
+                        transform: translateX(-9.5rem) translateY(11rem) scale(1.05);
                     }
                 }
             }
